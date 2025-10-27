@@ -22,5 +22,22 @@ A critical aspect of a programming language is the means it provides for using n
 In Python, names are often called ==_variable names_ or _variables_== because they can be bound to different values in the course of executing a program. When a name is bound to a new value through assignment, it is ==no longer bound to any previous value.== One can even bind built-in names to new values.
 
 ### 1.2.5   Evaluating Nested Expressions
+![[Pasted image 20251027164222.png]]
 
+
+### 1.2.6   The Non-Pure Print Function
+
+**Pure functions.** Functions have some input (their arguments) and return some output (the result of applying them). The built-in function
+
+**Non-pure functions.** In addition to returning a value, applying a non-pure function can generate _side effects_, which make some change to the state of the interpreter or computer. A common side effect is to generate additional output beyond the return value, using the print function.
+
+### 1.3   Defining New Functions
+**How to define a function.** Function definitions consist of a def statement that indicates a <name> and a comma-separated list of named <formal parameters>, then a return statement, called the function body, that specifies the <return expression> of the function, which is an expression to be evaluated whenever the function is applied:
+
+
+
+An environment in which an expression is evaluated consists of a sequence of _frames_, depicted as boxes.Each frame contains _bindings_, each of which associates a name with its corresponding value. There is a single _global_ frame. Assignment and import statements add entries to the first frame of the current environment. So far, our environment consists only of the global frame.
+
+
+the meaning of a function should be independent of the parameter names chosen by its author
 
