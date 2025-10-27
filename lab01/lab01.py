@@ -1,6 +1,5 @@
 def digit(n, k):
     """Return the k-th digit from the right of n for positive integers n and k.
-
     >>> digit(3579, 2)
     5
     >>> digit(3579, 0)
@@ -8,8 +7,7 @@ def digit(n, k):
     >>> digit(3579, 10)
     0
     """
-    return ____
-
+    return n//(10**k)%10
 
 def middle(a, b, c):
     """Return the number among a, b, and c that is not the smallest or largest.
@@ -26,7 +24,7 @@ def middle(a, b, c):
     >>> middle(30, 5, 40)
     30
     """
-    return ____
+   
 
 
 def falling(n, k):
