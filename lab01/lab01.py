@@ -24,6 +24,7 @@ def middle(a, b, c):
     >>> middle(30, 5, 40)
     30
     """
+    return max(min(a,b),min(b,c),min(a,c))
    
 
 
