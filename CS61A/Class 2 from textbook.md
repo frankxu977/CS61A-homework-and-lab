@@ -48,6 +48,7 @@
     *   **语句**: 用于**执行**一个动作，改变解释器的状态。它们本身没有值。
     *   我们已经接触的语句: **assignment**, **def**, **return**。
     *   一个常见的错误是函数体内只有表达式而没有 `return`，导致结果被丢弃。
+    * ==_Control statements_ will give us this ability. They are statements that control the flow of a program's execution based on the results of logical comparisons.==
         ```python
         def square(x):
             mul(x, x)  # Watch out! This call doesn't return a value.
@@ -60,6 +61,9 @@
     *   **结构**: `<header>: <suite>`
     *   例如：`def` 语句就是一个复合语句。
 *   执行规则：按顺序执行，除非控制流被重定向。
+* ==Expressions, return statements, and assignment statements are simple statements.==
+- ==A def statement is a compound statement. The suite that follows the def header defines the function body.==
+-  a sequence can be decomposed into its first element and the rest of its elements.
 
 #### 1.5.3 定义函数 II：局部赋值
 
