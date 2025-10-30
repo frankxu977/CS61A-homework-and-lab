@@ -15,6 +15,40 @@ def increment(x):
 
 SOURCE_FILE = __file__
 
+def identity(k):
+	return k
+	
+def cube(k):
+	return pow(k,2)
+	
+def increment(k):
+	return k+1
+
+def triple(k):
+	return pow(k,3)
+	
+def product(n,term):
+	total,k=1,1
+	while k<=n:
+		total,k=total*term(k),k+1
+	return total 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def product(n, term):
     """Return the product of the first n terms in a sequence.
