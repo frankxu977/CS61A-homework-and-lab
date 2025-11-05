@@ -1,3 +1,6 @@
+from re import I
+
+
 def digit(n, k):
     """Return the k-th digit from the right of n for positive integers n and k.
     >>> digit(3579, 2)
@@ -29,41 +32,21 @@ def middle(a, b, c):
 
 
 def falling(n, k):
-    """Compute the falling factorial of n to depth k.
-
-    >>> falling(6, 3)  # 6 * 5 * 4
-    120
-    >>> falling(4, 3)  # 4 * 3 * 2
-    24
-    >>> falling(4, 1)  # 4
-    4
-    >>> falling(4, 0)
-    1
-    """
-    "*** YOUR CODE HERE ***"
+    result = 1
+    for i in range(k+1):
+        result = result * (n - i)
+    
+    return result
 
 
 def divisible_by_k(n, k):
-    """
-    >>> a = divisible_by_k(10, 2)  # 2, 4, 6, 8, and 10 are divisible by 2
-    2
-    4
-    6
-    8
-    10
-    >>> a
-    5
-    >>> b = divisible_by_k(3, 1)  # 1, 2, and 3 are divisible by 1
-    1
-    2
-    3
-    >>> b
-    3
-    >>> c = divisible_by_k(6, 7)  # There are no integers up to 6 that are divisible by 7
-    >>> c
-    0
-    """
-    "*** YOUR CODE HERE ***"
+    count = 0
+    for i in range(1, n + 1):
+        if i % k == 0:
+            print(i)
+            count += 1
+    return count
+   
 
 
 def sum_digits(y):
@@ -97,5 +80,9 @@ def double_eights(n):
     >>> double_eights(80808080)
     False
     """
-    "*** YOUR CODE HERE ***"
+    num_str = str(n)
+    for i in range(len(num_str) - 1):
+        if num_str[i] == '8' and num_str[i + 1] == '8':
+            return True
+    return False
 
